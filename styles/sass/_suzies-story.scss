@@ -1,0 +1,88 @@
+$white: #fcfcfc;
+$lightGreen: #c3d3cb;
+$black: #000000;
+$darkGreen: #152d20;
+
+.suzies-story {
+   background-color: $darkGreen;
+   color: $white;
+   width: 100%;
+   
+   
+   .flex-container {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .text-container, .img-container{
+      height: 100%;
+   }
+
+   .text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 300px;
+      min-width: 328px;
+   }
+
+   img {
+      min-width: 300px
+   }
+
+   p {
+      font-family: 'Roboto', sans-serif;
+      height : 100%;
+      font-size: clamp(0.9rem, 1.2rem, 2vw);
+      margin-bottom: 10px;
+   }
+
+   h2 {
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      margin-bottom: 10px;
+   }
+
+   a {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      text-align: center;
+      width: 200px;
+      padding: 10px 20px;
+      background-color: $white;
+      color: $darkGreen;
+   }
+
+   // MEDIA QUERIES
+   @media (max-width: 768px) {
+      .flex-container {
+         flex-direction: column;
+         align-items: center;
+         gap: 20px;
+      }
+
+      .text-container {
+         width: 100%;
+         height: 100%;
+         min-width: 0;
+      }
+
+      img {
+         width: 100%;
+         min-width: 0;
+      }
+
+      a {
+         width: 100%;
+      }
+
+      p {
+         margin-bottom: 20px;
+      }
+   }
+}

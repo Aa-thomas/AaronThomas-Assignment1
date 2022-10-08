@@ -272,7 +272,7 @@ a {
 }
 
 section {
-  padding: 40px;
+  padding: 40px 0;
 }
 
 header {
@@ -300,6 +300,7 @@ header ul li {
 header h1 {
   text-transform: uppercase;
   font-size: clamp(3.5rem, 4.5rem, 10vw);
+  font-weight: 400;
   position: absolute;
   right: 0%;
   top: 18vh;
@@ -327,7 +328,7 @@ header .icons ul li {
 header .icons ul i {
   font-size: 1rem;
 }
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   header nav li {
     display: none;
   }
@@ -359,5 +360,96 @@ header .icons ul i {
   }
   header .icons ul {
     display: none;
+  }
+}
+
+.suzies-story {
+  background-color: #152d20;
+  color: #fcfcfc;
+  width: 100%;
+}
+.suzies-story .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  gap: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.suzies-story .text-container, .suzies-story .img-container {
+  height: 100%;
+}
+.suzies-story .text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 300px;
+  min-width: 328px;
+}
+.suzies-story img {
+  min-width: 300px;
+}
+.suzies-story p {
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+  font-size: clamp(0.9rem, 1.2rem, 2vw);
+  margin-bottom: 10px;
+}
+.suzies-story h2 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.suzies-story a {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  text-align: center;
+  width: 200px;
+  padding: 10px 20px;
+  background-color: #fcfcfc;
+  color: #152d20;
+}
+@media (max-width: 768px) {
+  .suzies-story .flex-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
+  .suzies-story .text-container {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+  }
+  .suzies-story img {
+    width: 100%;
+    min-width: 0;
+  }
+  .suzies-story a {
+    width: 100%;
+  }
+  .suzies-story p {
+    margin-bottom: 20px;
   }
 }
