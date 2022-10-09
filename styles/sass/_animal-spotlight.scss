@@ -1,0 +1,43 @@
+$white: #fcfcfc;
+$lightGreen: #c3d3cb;
+$black: #000000;
+$darkGreen: #152d20;
+
+.animal-spotlight {
+   background-color: $darkGreen;
+
+   i {
+      font-size: 3rem;
+      color: $white;
+      padding: 10px;
+   }
+
+   .flex-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+   }
+
+   .img-container {
+      width: 30%;
+      text-align: center;
+      margin: 10px;
+   }
+
+   p {
+      font-size: clamp(1.3rem, 1.5rem, 3vw);
+      text-transform: uppercase;
+   }
+
+   // MEDIA QUERIES
+      @media (max-width: 768px) {
+         .flex-container {
+            flex-direction: column;
+            justify-content: space-between;
+         }
+
+         .img-container {
+            margin: 20px 0;
+         }
+      }
+}
