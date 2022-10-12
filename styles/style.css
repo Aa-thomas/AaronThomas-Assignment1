@@ -576,7 +576,8 @@ header .icons ul i {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 20px;
+  max-height: 100%;
+  gap: 10px;
 }
 .zebras .text-container-top {
   padding-left: 8%;
@@ -596,14 +597,30 @@ header .icons ul i {
   color: #fcfcfc;
 }
 .zebras h2 {
-  font-size: clamp(1.3rem, 1.8rem, 3vw);
+  font-size: clamp(1.3rem, 1.8rem, 2.7vw);
   text-transform: uppercase;
   font-weight: 400;
 }
 .zebras p {
   font-family: "Roboto", sans-serif;
-  font-size: clamp(0.8rem, 1.2rem, 2vw);
+  font-size: clamp(0.8rem, 1.2rem, 1.6vw);
   margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .zebras .flex-container-top, .zebras .flex-container-bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .zebras .img-container, .zebras .text-container-top, .zebras .text-container-bottom {
+    width: 100%;
+    height: 100%;
+  }
+  .zebras .text-container-top, .zebras .text-container-bottom {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
 }
 
 footer {
